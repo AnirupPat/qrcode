@@ -1,0 +1,25 @@
+.main-toolbar {
+    background-color: yellow;
+}
+.block {
+	display: flex;
+	flex-direction: row;
+	justify-items: center;
+	flex-wrap: nowrap;
+    width: 100%;
+	.block-one {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		.fa {
+			visibility: hidden;
+		}
+		.navbar {
+			padding: 0rem 0.5rem;
+		}
+
+	}
+}
+
+
+

@@ -1,0 +1,9 @@
+<div>
+    <input type="text" name="login" id="login_field" [(ngModel)]="numberForQR" #ctrl="ngModel" autofocus="autofocus">
+    <button (click)="generateQR()" name="commit" value="Log in">
+      Submit
+    </button>
+  </div>
+  
+  <h2>Dynamic QR Code Generation</h2>
+  <ngx-qrcode qrc-element-type="elementType" [qrc-value]="value2" ></ngx-qrcode>
