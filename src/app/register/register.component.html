@@ -1,6 +1,17 @@
-<div class="main-div">
-  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Name">
+  </mat-form-field>
 
+  <mat-form-field>
+    <textarea matInput placeholder="Mobile Number"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Company Name"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="delete()">
+      Register
+    </button>
 </div>

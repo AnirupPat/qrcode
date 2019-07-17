@@ -16,16 +16,11 @@ export class RegisterComponent implements OnInit {
   	secondFormGroup: FormGroup;
 	
   constructor(
-	private _formBuilder: FormBuilder
+	//private _formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
-	this.firstFormGroup = this._formBuilder.group({
-		firstCtrl: ['', Validators.required]
-	});
-	this.secondFormGroup = this._formBuilder.group({
-		secondCtrl: ['', Validators.required]
-	});
+	
   }
 
 }
