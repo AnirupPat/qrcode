@@ -10,7 +10,9 @@ import { MatCardModule,MatStepperModule, MatInputModule, MatCheckboxModule, MatB
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,9 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     MatMenuModule,
     MatCardModule,
-
+    AngularFireModule.initializeApp(environment.firebase),
     MatStepperModule,
-    
+    HttpClientModule,
     MatInputModule,
     MatCheckboxModule,
     MatButtonModule,
