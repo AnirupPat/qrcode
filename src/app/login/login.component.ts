@@ -32,19 +32,14 @@ export class LoginComponent implements OnInit {
     this.windowRef = this.win.windowRef;
     //firebase.auth().settings.appVerificationDisabledForTesting = true;
     this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
- 'size': 'invisible'
- })
- 
- this.windowRef.recaptchaVerifier.render();
+      'size': 'invisible'
+    })
 
-
-
-
-
- this.httpClient.get("https://sheets.googleapis.com/v4/spreadsheets/1dckCdC77nmYaoS4hJaSh5FGc4TIkCwVZIZEbT7Zgx6M/values/A2%3AB10?majorDimension=ROWS&key=AIzaSyBlMdlIbjzFzafcF-7gnVQVFIwgpCvolSw")
+    this.windowRef.recaptchaVerifier.render();
+    this.httpClient.get("https://sheets.googleapis.com/v4/spreadsheets/1dckCdC77nmYaoS4hJaSh5FGc4TIkCwVZIZEbT7Zgx6M/values/A2%3AB10?majorDimension=ROWS&key=AIzaSyBlMdlIbjzFzafcF-7gnVQVFIwgpCvolSw")
       .subscribe((data) =>  {
         console.log(data)
-      });
+    });
   }
 
   login(mobileNumber) {
