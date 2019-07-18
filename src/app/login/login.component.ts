@@ -12,7 +12,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
   windowRef: any
-  phoneNumber: string = '+919980179944'
+  dsid: string = ""
+  userData: any
+  phoneNumber: string = '+919980179944' // Ram's number
   verificationCode: any
   invalidOTP: boolean
   phForm: boolean
@@ -39,6 +41,8 @@ export class LoginComponent implements OnInit {
     this.httpClient.get("https://sheets.googleapis.com/v4/spreadsheets/1dckCdC77nmYaoS4hJaSh5FGc4TIkCwVZIZEbT7Zgx6M/values/A2%3AB10?majorDimension=ROWS&key=AIzaSyBlMdlIbjzFzafcF-7gnVQVFIwgpCvolSw")
       .subscribe((data) =>  {
         console.log(data)
+        this.userData = data.values
+        console.log(this.userData)
     });
   }
 
@@ -49,7 +53,7 @@ export class LoginComponent implements OnInit {
 
 
   sendLoginCode() {
- 
+    
     const appVerifier = this.windowRef.recaptchaVerifier;
     
     const num = this.phoneNumber;
